@@ -1,32 +1,19 @@
 [app]
-
-# (str) Title of your application
 title = Apple Doctor
-
-# (str) Package name
 package.name = appledoctor
-
-# (str) Package domain (needed for android packaging)
 package.domain = org.rahilafzal
-
-# (str) Source code where the main.py live
 source.dir = .
-
-# (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,tflite
-
-# (str) Application versioning
+source.include_exts = py,png,jpg,kv,atlas
 version = 1.0.0
 
-# (list) Application requirements
-# Yahan maine AI library aur image processing ki saari cheezein daal di hain
-requirements = python3,kivy,google-generativeai,pillow,numpy,requests,charset-normalizer,idna,urllib3,certifi
+# Zaroori Libraries (AI aur Images ke liye)
+requirements = python3,kivy,google-generativeai,pillow,requests
 
-# (str) Supported orientation (landscape, portrait or all)
 orientation = portrait
-
-# (list) Permissions
-# Camera aur Gallery ke liye ye permissions bahut zaroori hain
 android.permissions = INTERNET, CAMERA, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
+android.api = 31
+android.archs = arm64-v8a, armeabi-v7a
 
-# (int) Target
+[buildozer]
+log_level = 2
+warn_on_root = 1
